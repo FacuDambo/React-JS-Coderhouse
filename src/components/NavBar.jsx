@@ -2,26 +2,20 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import CartWidget from './CartWidget'
 
 function NavBar() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">Navbar de prueba</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" className="nav-background">
+            <Container >
+                <a href="#home"><img src="assets/img/logo.svg" alt="logo del sitio web" className="logo-style" /></a> 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-                    <Nav>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
+                    <Nav className="flex-row justify-content-around nav-margin align-items-center">
+                        <a href="#productos" className="navbar-link">PRODUCTOS</a>
+                        <a href="#imagenes" className="navbar-link">IMAGENES</a>
+                        <a href="#sobreNosotros" className="navbar-link">SOBRE NOSOTROS</a>
+                        <CartWidget />
                     </Nav>
                 </Navbar.Collapse>
             </Container>

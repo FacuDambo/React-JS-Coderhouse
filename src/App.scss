@@ -1,0 +1,55 @@
+/* Imports */
+@import "~bootstrap/scss/bootstrap";
+
+/* Variables */
+$color-palette1: #F4EEFF;
+$color-palette2: #DCD6F7;
+$color-palette3: #A6B1E1;
+$color-palette4: #434975;
+
+/* Content */
+
+.App {
+  text-align: center;
+}
+
+.cart-widget {
+  color: $color-palette4;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0px 8px;
+}
+
+.cart-widget:hover {
+  background-color: $color-palette1;
+  cursor: pointer;
+}
+
+.nav-background {
+  background-color: $color-palette2;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: $color-palette4;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 7px 15px;
+}
+
+.navbar-link:hover {
+  color: #2e314e;
+  background-color: $color-palette1;
+  border-radius: 10px;
+}
+
+.logo-style {
+  height: 5rem;
+}
+@media only screen and (max-width: 990px) {
+  .nav-margin {
+    margin-top: 1rem;
+  }
+}
