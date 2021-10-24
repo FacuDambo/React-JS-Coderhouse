@@ -48,6 +48,60 @@ $color-palette4: #434975;
 .logo-style {
   height: 5rem;
 }
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;}
+
+.card-style {
+  background-color: $color-palette1;
+  margin: 1rem;
+  padding: 1rem;
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+    h3 {
+      margin-bottom: unset;
+      font-size: 1.5rem;
+    }
+}
+
+.estiloContador {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5rem;
+
+    button {
+      align-self: stretch;
+    }
+}
+
+.contador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: stretch;
+  background-color: white;
+  border: 1px solid black;
+
+    button {
+      border: unset;
+      background-color: transparent;
+      font-size: 1.5rem;
+    }
+
+    span {
+      background-color: white;
+      padding: 0px 10px;
+      font-size: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 990px) {
   .nav-margin {
     margin-top: 1rem;
