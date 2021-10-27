@@ -5,11 +5,17 @@ export function ItemCount({stock, initial, onAdd}) {
     const [count, setCount] = useState(initial)
 
     const handleClickPlus = () => {
-        count < stock ? setCount (count + 1) : alert ("Limite de stock")
+        const newValue = count + 1
+        if (newValue <= stock) {
+            setCount(newValue)
+        }
     }
     
     const handleClickMinus = () => {
-        count > 1 ? setCount (count - 1) : alert ('No se puede bajar de 1')
+        const newValue = count - 1
+        if (initial <= newValue) {
+            setCount(newValue)
+        }
     }
     
     return (

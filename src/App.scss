@@ -49,9 +49,12 @@ $color-palette4: #434975;
   height: 5rem;
 }
 
-.cardContainer {
+.itemList {
   display: flex;
-  flex-direction: row;}
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 .card-style {
   background-color: $color-palette1;

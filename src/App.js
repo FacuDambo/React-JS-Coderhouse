@@ -1,13 +1,13 @@
 import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import CardContainer from './components/CardContainer';
+import ItemListContainer from './components/items/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <CardContainer />
+      <ItemListContainer />
     </div>
   );
 }
