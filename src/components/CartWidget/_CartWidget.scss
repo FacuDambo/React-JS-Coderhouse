@@ -1,0 +1,14 @@
+.cart-widget {
+    color: $clr-8;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0px 8px;
+}
+
+.cart-widget:hover {
+    background-color: $clr-2;
+    color: #000000;
+    cursor: pointer;
+}

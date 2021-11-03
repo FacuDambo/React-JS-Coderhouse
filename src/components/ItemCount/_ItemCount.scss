@@ -1,0 +1,32 @@
+.item-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: stretch;
+    background-color: white;
+    border: 1px solid black;
+
+    button {
+        border: unset;
+        background-color: transparent;
+        font-size: 1.5rem;
+    }
+
+    span {
+        background-color: white;
+        padding: 0px 10px;
+        font-size: 1.5rem;
+    }
+}
+
+.item-count-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+
+    button {
+        align-self: stretch;
+    }
+}

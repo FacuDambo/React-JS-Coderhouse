@@ -1,148 +1,36 @@
-/* Imports */
-@import "~bootstrap/scss/bootstrap";
-
 /* Variables */
-$color-palette1: #F4EEFF;
-$color-palette2: #DCD6F7;
-$color-palette3: #A6B1E1;
-$color-palette4: #434975;
+$clr-1: #fff7fd;
+$clr-2: #fadfff;
+$clr-3: #f1cffd;
+$clr-4: #E5B3FE;
+$clr-5: #E2AFFF;
+$clr-6: #d798ff;
+$clr-7: #a776e7;
+$clr-8: #9a50d6;
+$clr-9: #6c28ac;
+$clr-10: #390b58;
+
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import "~bootstrap/scss/bootstrap";
+@import "components/NavBar/NavBar";
+@import "components/Item/Item";
+@import "components/CartWidget/CartWidget";
+@import "components/ItemCount/ItemCount";
+@import "components/ItemDetail/ItemDetail";
+@import "components/ItemList/ItemList";
+@import "components/ItemListContainer/ItemListContainer";
+
 
 /* Content */
-
 .App {
   text-align: center;
+  font-family: 'Oswald', sans-serif;
 }
 
-.cart-widget {
-  color: $color-palette4;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 5px;
-  border-radius: 10px;
-  margin: 0px 8px;
-}
-
-.cart-widget:hover {
-  background-color: $color-palette1;
-  cursor: pointer;
-}
-
-.nav-background {
-  background-color: $color-palette2;
-}
-
-.navbar-link {
-  text-decoration: none;
-  color: $color-palette4;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding: 7px 15px;
-}
-
-.navbar-link:hover {
-  color: #2e314e;
-  background-color: $color-palette1;
-  border-radius: 10px;
-}
-
-.logo-style {
-  height: 5rem;
-}
-
-.itemList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.itemDetail {
-  background-color: $color-palette1;
-  display: flex;
-  flex-direction: column;
-
-    .cardDetail{
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-around;
-
-        img {
-          width: 25%;
-        }
-
-      .detailSide {
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-          h3 {
-            font-size: 2.5rem;
-          }
-
-          span{
-            font-size: 2rem;
-          }
-
-          p{
-            font-size: 2rem;
-          }
-      }
-    }
-}
-
-.card-style {
-  background-color: $color-palette1;
-  margin: 1rem;
-  padding: 1rem;
-  width: 20rem;
-  height: 30rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-    h3 {
-      margin-bottom: unset;
-      font-size: 1.5rem;
-    }
-}
-
-.estiloContador {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 5rem;
-
-    button {
-      align-self: stretch;
-    }
-}
-
-.contador {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-self: stretch;
-  background-color: white;
-  border: 1px solid black;
-
-    button {
-      border: unset;
-      background-color: transparent;
-      font-size: 1.5rem;
-    }
-
-    span {
-      background-color: white;
-      padding: 0px 10px;
-      font-size: 1.5rem;
-    }
-}
-
-@media only screen and (max-width: 990px) {
-  .nav-margin {
-    margin-top: 1rem;
-  }
+body {
+  background-image: url(https://i.pinimg.com/originals/36/30/00/363000c1b5735897d229b4d3f2504126.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }

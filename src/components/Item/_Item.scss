@@ -1,0 +1,65 @@
+.item {
+    background-color: white;
+    margin: 1rem;
+    width: 22rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .item-span-categoria {
+        font-size: 1rem;
+        font-weight: 400;
+        background-color: $clr-9;
+        color: $clr-1;
+        border-radius: 0px 0px 0px 10px;
+        padding: 2px 10px;
+        right: 0px;
+        top: 0px;
+        align-self: flex-end;
+    }
+
+    .item-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: -webkit-fill-available;
+        padding-bottom: 1rem;
+    }
+
+    img {
+        padding: 0rem 2.5rem;
+        height: 20rem;
+    }
+
+    .item-span-nombre {
+        margin-bottom: unset;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .item-span-descripcion {
+        font-weight: 300;
+        width: 16rem;
+    }
+
+    .item-span-precio {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .item-button {
+        font-size: 1rem;
+        border: unset;
+        color: $clr-1;
+        background-color: $clr-9;
+        padding: 15px;
+        width: -webkit-fill-available;
+    }
+
+    .item-button:hover {
+        background-color: $clr-4;
+        color: $clr-9;
+    }
+}
