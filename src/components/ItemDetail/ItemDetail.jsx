@@ -1,11 +1,14 @@
-import React from 'react'
+import {useState} from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
 
 const ItemDetail = ({detail}) => {
-    const handleClick = (total) => {
-        alert (`Cantidad de productos agregada: ${total}`)
+    const [count, setCount] = useState(1)
+
+    const onAdd = (total) => {
+        setCount(total)
     }
-    
+    console.log(count);
+
     return (
         <div className="itemDetail">
             <div className="cardDetail">
@@ -14,7 +17,7 @@ const ItemDetail = ({detail}) => {
                     <h3>{detail.nombre}</h3>
                     <span>{detail.precio}</span>
                     <p>Stock disponible {detail.stock}</p>
-                    <ItemCount stock={detail.stock} initial= {1} onAdd={handleClick}/>
+                    <ItemCount stock={detail.stock} initial= {1} onAdd={onAdd}/>
                 </div>
             </div>
             <p>{detail.descripcion}</p>

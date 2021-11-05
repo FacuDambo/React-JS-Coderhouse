@@ -8,8 +8,12 @@
 
     button {
         border: unset;
-        background-color: transparent;
+        background-color: blue;
         font-size: 1.5rem;
+    }
+
+    button:disabled {
+        background-color: blueviolet;
     }
 
     span {
@@ -22,7 +26,7 @@
 .item-count-style {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 5rem;
 

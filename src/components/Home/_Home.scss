@@ -1,0 +1,180 @@
+.home-start {
+    height: calc(100vh - 96px);
+    background-image: url(https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+
+    .home-start-div {
+        position: relative;
+        top: 20%;
+        left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 23%;
+        color: white;
+        z-index: 1;
+
+        h1 {
+            font-size: 6vw;
+            font-weight: 400;
+            letter-spacing: 2px;
+            line-height: 0.9;
+            margin-bottom: unset;
+            text-align: start;
+        }
+
+        p {
+            font-weight: 300;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            letter-spacing: 4px;
+            text-align: start;
+        }
+
+        .home-start-div-button {
+            border: unset;
+            background-color: white;
+            padding: 1rem;
+            margin-top: 4rem;
+            align-self: flex-start;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        &:hover+.home-shading {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+    }
+
+    .home-shading {
+        display: block;
+        position: absolute;
+        height: calc(100vh - 95px);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        bottom: 0;
+        left: 0;
+        transition: background-color .6s ease-in-out;
+        pointer-events: none;
+        color: white;
+    }
+
+    img {
+        width: 99.1vw;
+    }
+}
+
+
+//Sombreado de las cards de home mas abajo
+.grid-shading {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    bottom: 0;
+    left: 0;
+    transition: background-color .4s ease-in-out;
+    pointer-events: none;
+    color: white;
+}
+
+//Cards de home que llevan a diferentes categorias
+.home-start-grid {
+    display: grid;
+    grid-template-areas: "agendas agendas agendas agendas agendas agendas cuadernos cuadernos cuadernos cuadernos cuadernos cuadernos"
+        "agendas agendas agendas agendas agendas agendas recetarios recetarios recetarios viajes viajes viajes";
+    height: 100vh;
+
+    .grid-agendas {
+        grid-area: agendas;
+        background-image: url(https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+        background-size: cover;
+        position: relative;
+
+        .grid-agendas-link {
+            position: relative;
+            top: 40%;
+            text-decoration: none;
+            color: white;
+            z-index: 1;
+
+            font-size: 3rem;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+            &:hover+.grid-shading {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+    }
+
+    .grid-cuadernos {
+        grid-area: cuadernos;
+        background-image: url(https://images.unsplash.com/photo-1519658422992-0c8495f08389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1155&q=80);
+        background-size: cover;
+        position: relative;
+
+        .grid-cuadernos-link {
+            position: relative;
+            top: 40%;
+            text-decoration: none;
+            color: white;
+            z-index: 1;
+
+            font-size: 3rem;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+            &:hover+.grid-shading {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+    }
+
+
+    .grid-recetarios {
+        grid-area: recetarios;
+        background-image: url(https://images.unsplash.com/photo-1586062129117-08db958ba215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+        background-size: cover;
+        position: relative;
+
+        .grid-recetarios-link {
+            position: relative;
+            top: 40%;
+            text-decoration: none;
+            color: white;
+            z-index: 1;
+
+            font-size: 3rem;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+            &:hover+.grid-shading {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+    }
+
+
+
+    .grid-viajes {
+        grid-area: viajes;
+        background-image: url(https://images.unsplash.com/photo-1606636661598-60b82d8909ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+        background-size: cover;
+        position: relative;
+
+        .grid-viajes-link {
+            position: relative;
+            top: 40%;
+            text-decoration: none;
+            color: white;
+            z-index: 1;
+
+            font-size: 3rem;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+            &:hover+.grid-shading {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ import './App.scss';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart.jsx';
+import Home from './components/Home/Home.jsx';
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
         <NavBar />
           <Switch>
             <Route exact path="/">
-              <ItemListContainer />
+              <Home />
             </Route>
             
             <Route exact path="/productos">
-              Futura seccion de productos
+              <ItemListContainer />
             </Route>
 
             <Route exact path="/sobre-nosotros">
