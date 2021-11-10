@@ -1,34 +1,106 @@
-.itemDetail {
-    background-color: $clr-1;
-    display: flex;
-    flex-direction: column;
+.item-detail {
+    @include fc;
+    height: $nav-height;
+    overflow: hidden;
 
-    .cardDetail {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
+    .card-detail {
+        @include fc;
+        background: white;
 
-        img {
-            width: 25%;
+        .carousel-inner {
+            padding: 6vw;
         }
 
-        .detailSide {
-            width: 25%;
+        .detail-info {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
+            background: #fff;
+            height: $nav-height;
+            width: 60%;
+            padding: 35px 8vw 35px 0px;
 
-            h3 {
-                font-size: 2.5rem;
+            .detail-nombre-info,
+            .detail-descripcion,
+            .detail-precio-stock{
+                border-bottom: 1px solid #dadada;
             }
 
-            span {
-                font-size: 2rem;
+            .detail-nombre-info {
+                padding: 0 0 20px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                div {
+                    @include fc(1, 0);
+
+                    .detail-nombre {
+                        color: #333;
+                        font-size: 2rem;
+                        margin-right: 14px;
+                        margin-bottom: unset;
+                        line-height: 1;
+                    }
+
+                    .detail-categoria {
+                        background: $clr-6;
+                        border-radius: 5px;
+                        color: black;
+                        padding: 3px 10px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .min-des {
+                    color: #7a7a7a;
+                    font-weight: 500;
+                    margin-top: 3px;
+                    text-transform: capitalize;
+                    margin-bottom: unset;
+                }
             }
 
-            p {
-                font-size: 2rem;
+            .detail-descripcion {
+                padding: 20px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .dd-titulo {
+                    color: #3a3a3a;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    margin-bottom: unset;
+                }
+
+                .dd-parrafo {
+                    color: #555;
+                    font-size: 17px;
+                    margin-bottom: unset;
+                    text-align: start;
+                }
+            }
+
+            .detail-precio-stock {
+                @include fc(1, 0);
+                flex-direction: row;
+                padding: 20px 0px;
+                justify-content: space-between;
+
+                .detail-precio {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                }
+
+                .detail-stock {
+                    margin-bottom: unset;
+                    font-size: 1.4rem;
+                    color: #555;
+                    letter-spacing: -0.5px;
+                    width: 60%;
+                }
             }
         }
     }

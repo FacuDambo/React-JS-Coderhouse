@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import {RiShoppingBagLine, RiShoppingCartFill} from 'react-icons/ri'
 
 
 export function ItemCount({stock, initial, onAdd}) {
@@ -35,10 +36,10 @@ export function ItemCount({stock, initial, onAdd}) {
             </div>
             { cambiarBoton ? 
                 <Link to="/carrito">
-                    <button className="addCart">Terminar Compra</button>
+                    <button className="addCart"><RiShoppingCartFill/>Terminar Compra</button>
                 </Link>
                 : 
-                <button className="addCart" onClick={handleOnAdd}>Agregar al carrito</button>
+                <button className="addCart" onClick={handleOnAdd}><RiShoppingBagLine />Agregar al carrito</button>
             }
             
         </div>

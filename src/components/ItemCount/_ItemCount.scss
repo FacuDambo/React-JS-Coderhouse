@@ -1,36 +1,63 @@
+.item-count-style {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0px;
+
+    .addCart {
+        align-self: stretch;
+        border: unset;
+        background-color: $clr-8;
+        color: white;
+        transition: 0.3s;
+        border-radius: 10px;
+        height: 3rem;
+        padding: 0px 10px;
+
+        svg {
+            margin: 0px 10px 4px 0px;
+        }
+
+        &:hover {
+            background-color: $clr-4;
+            color: black;
+        }
+    }
+}
+
 .item-count {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-self: stretch;
-    background-color: white;
-    border: 1px solid black;
+    width: 50%;
 
     button {
         border: unset;
-        background-color: blue;
+        border-radius: 20px;
+        background-color: $clr-9;
+        color: white;
         font-size: 1.5rem;
-    }
-
-    button:disabled {
-        background-color: blueviolet;
+        transition: 0.3s;
+        
+        &:hover {
+            background-color: $clr-5;
+            color: black;
+        }
+        
+        &:disabled {
+            background-color: $clr-6;
+        }
+        
+        &:hover:disabled {
+            background-color: $clr-6;
+            color: white;
+        }
     }
 
     span {
         background-color: white;
         padding: 0px 10px;
-        font-size: 1.5rem;
-    }
-}
-
-.item-count-style {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
-
-    button {
-        align-self: stretch;
+        font-size: 2rem;
     }
 }

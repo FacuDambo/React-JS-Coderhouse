@@ -1,5 +1,5 @@
 .home-start {
-    height: calc(100vh - 96px);
+    height: $nav-height;
     background-image: url(https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
     background-size: cover;
 
@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 23%;
+        width: 26vw;
         color: white;
         z-index: 1;
 
@@ -18,7 +18,7 @@
             font-size: 6vw;
             font-weight: 400;
             letter-spacing: 2px;
-            line-height: 0.9;
+            line-height: 1;
             margin-bottom: unset;
             text-align: start;
         }
@@ -43,7 +43,7 @@
         }
 
         &:hover+.home-shading {
-            background-color: rgba(0, 0, 0, 0.8) !important;
+            background-color: rgba(0, 0, 0, 0.7) !important;
         }
     }
 
