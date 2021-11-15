@@ -58,7 +58,17 @@ const detalles = [
         stock: 9, 
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur", 
         categoria: "Cuadernos", 
-        minDescripcion: "Cuadernos hoja lisa"}
+        minDescripcion: "Cuadernos hoja lisa"},
+    {id: "7", 
+        nombre: "PRODUCTO 7", 
+        img: "https://mypcwalls.com/wp-content/uploads/2021/08/minimalist-Wallpaper.jpg", 
+        img2: "https://mypcwalls.com/wp-content/uploads/2021/08/minimalist-Computer-Wallpaper.jpg", 
+        img3: "https://mypcwalls.com/wp-content/uploads/2021/08/minimalist-Desktop-Wallpaper.jpg", 
+        precio: 1250, 
+        stock: 5, 
+        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur", 
+        categoria: "Agendas", 
+        minDescripcion: "Agendas 2022"}
 ]
 
 const getProductsDetail = new Promise ((res, rej) => {

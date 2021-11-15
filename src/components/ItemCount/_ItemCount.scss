@@ -4,6 +4,10 @@
     align-items: center;
     padding: 20px 0px;
 
+    .item-count-btn{
+        display: flex;
+    }
+    
     .addCart {
         align-self: stretch;
         border: unset;
@@ -12,7 +16,8 @@
         transition: 0.3s;
         border-radius: 10px;
         height: 3rem;
-        padding: 0px 10px;
+        margin: 0px 10px;
+        line-height: 10px;
 
         svg {
             margin: 0px 10px 4px 0px;

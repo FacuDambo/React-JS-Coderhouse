@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import {RiShoppingBagLine, RiShoppingCartFill} from 'react-icons/ri'
+import {RiShoppingBagLine, RiShoppingCartFill, RiShoppingBasket2Line} from 'react-icons/ri'
 
 
 export function ItemCount({stock, initial, onAdd}) {
@@ -35,9 +35,14 @@ export function ItemCount({stock, initial, onAdd}) {
                 <button onClick={handleClickPlus} disabled={count === stock}>+</button>
             </div>
             { cambiarBoton ? 
-                <Link to="/carrito">
-                    <button className="addCart"><RiShoppingCartFill/>Terminar Compra</button>
-                </Link>
+                <div className="item-count-btn">
+                    <Link to="/carrito">
+                        <button className="addCart"><RiShoppingCartFill/>Terminar Compra</button>
+                    </Link>
+                    <Link to="/productos">
+                        <button className="addCart"><RiShoppingBasket2Line/>Seguir comprando</button>
+                    </Link>
+                </div>
                 : 
                 <button className="addCart" onClick={handleOnAdd}><RiShoppingBagLine />Agregar al carrito</button>
             }

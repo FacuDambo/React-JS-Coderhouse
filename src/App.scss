@@ -10,6 +10,10 @@ $clr-8: #9a50d6;
 $clr-9: #6c28ac;
 $clr-10: #390b58;
 $nav-height: calc(100vh - 96px);
+$f-1: 3;
+$f-2: 3;
+$f-3: 1;
+$w-1: 1rem;
 
 //Mixins
 @mixin flex-centered($a: 1, $j: 1) {
@@ -37,7 +41,7 @@ $nav-height: calc(100vh - 96px);
 @import "components/ItemList/ItemList";
 @import "components/ItemListContainer/ItemListContainer";
 @import "components/Home/Home";
-
+@import "components/Cart/Cart";
 
 /* Content */
 .App {
