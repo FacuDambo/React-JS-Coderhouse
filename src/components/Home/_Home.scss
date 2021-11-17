@@ -1,7 +1,8 @@
 .home-start {
     height: $nav-height;
     background-image: url(https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
-    background-size: cover;
+    @include bg;
+    background-attachment: fixed;
 
     .home-start-div {
         position: relative;
@@ -21,11 +22,12 @@
             line-height: 1;
             margin-bottom: unset;
             text-align: start;
+            font-family: 'Satisfy', cursive;
         }
 
         p {
             font-weight: 300;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             margin-left: 10px;
             letter-spacing: 4px;
             text-align: start;
@@ -34,6 +36,7 @@
         .home-start-div-button {
             border: unset;
             background-color: white;
+            border-radius: 5px;
             padding: 1rem;
             margin-top: 4rem;
             align-self: flex-start;
@@ -90,7 +93,7 @@
     .grid-agendas {
         grid-area: agendas;
         background-image: url(https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
-        background-size: cover;
+        @include bg;
         position: relative;
 
         .grid-agendas-link {
@@ -112,7 +115,7 @@
     .grid-cuadernos {
         grid-area: cuadernos;
         background-image: url(https://images.unsplash.com/photo-1519658422992-0c8495f08389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1155&q=80);
-        background-size: cover;
+        @include bg;
         position: relative;
 
         .grid-cuadernos-link {
@@ -135,7 +138,7 @@
     .grid-recetarios {
         grid-area: recetarios;
         background-image: url(https://images.unsplash.com/photo-1586062129117-08db958ba215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-        background-size: cover;
+        @include bg;
         position: relative;
 
         .grid-recetarios-link {
@@ -159,7 +162,7 @@
     .grid-viajes {
         grid-area: viajes;
         background-image: url(https://images.unsplash.com/photo-1606636661598-60b82d8909ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-        background-size: cover;
+        @include bg;
         position: relative;
 
         .grid-viajes-link {

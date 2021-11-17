@@ -7,9 +7,9 @@ export const Item = ({detail}) => {
         <div key= {detail.id} className="item">
             <span className="item-span-categoria">{detail.categoria}</span>
                 <div className="item-detail">
-                    <img src={detail.img} alt="Imagen del producto" />
+                    <img src={detail.img4} alt="Imagen del producto" />
                     <h3 className="item-span-nombre">{detail.nombre}</h3>
-                    <span className="item-span-descripcion">{detail.descripcion}</span>
+                    <span className="item-span-descripcion">{detail.minDescripcion}</span>
                     <span className="item-span-precio">${detail.precio}</span>
                 </div>
                 <Link to={`/producto/${detail.id}`}>

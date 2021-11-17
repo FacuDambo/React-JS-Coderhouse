@@ -14,17 +14,18 @@ function NavBar() {
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Nav className="flex-row justify-content-around nav-margin align-items-center">
                         <NavLink exact to="/" activeClassName="active-navbar-link" className="navbar-link">HOME</NavLink>
-                        <NavLink to="/productos" activeClassName="active-nabar-link" className="navbar-link">PRODUCTOS</NavLink>
-                        <NavLink to="/sobre-nosotros" activeClassName="active-nabar-link" className="navbar-link">SOBRE NOSOTROS</NavLink>
+                        <NavLink to="/productos" activeClassName="active-navbar-link" className="navbar-link">PRODUCTOS</NavLink>
+                        <NavLink to="/sobre-nosotros" activeClassName="active-navbar-link" className="navbar-link">SOBRE NOSOTROS</NavLink>
                         <div className="navbar-dropdown">
-                            <span className="navbar-link-dropdown"> CATEGORIAS
+                            <NavLink to="/categoria" className="navbar-link-dropdown" activeClassName="active-navbar-link"> CATEGORIAS
                                 <div className="navbar-dropdown-content">
-                                    <NavLink to="/categoria/Cuadernos" className="navbar-link">CUADERNOS</NavLink>
                                     <NavLink to="/categoria/Agendas" className="navbar-link">AGENDAS</NavLink>
+                                    <NavLink to="/categoria/Cuadernos" className="navbar-link">CUADERNOS</NavLink>
+                                    <NavLink to="/categoria/Recetarios" className="navbar-link">RECETARIOS</NavLink>
                                 </div>
-                            </span>
+                            </NavLink>
                         </div>
-                        <NavLink to="/carrito"><CartWidget /></NavLink>
+                        <NavLink to="/carrito" activeClassName="active-navbar-link-carrito"><CartWidget /></NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

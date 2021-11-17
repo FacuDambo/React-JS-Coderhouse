@@ -6,13 +6,12 @@ import { useCartContext } from '../../context/CartContext'
 const ItemDetail = ({detail}) => {
     const [count, setCount] = useState(1)
 
-    const {cartList, agregarAlCarrito} = useCartContext()
+    const {agregarAlCarrito} = useCartContext()
 
     const onAdd = (total) => {
         setCount(total)
         agregarAlCarrito({detail, cantidad: total})
     }
-    console.log(cartList);
 
     return (
         <div className="item-detail">
@@ -56,7 +55,7 @@ const ItemDetail = ({detail}) => {
                         <span className="detail-precio">${detail.precio}</span>
                         <p className="detail-stock">Stock disponible: {detail.stock} {detail.stock > 1 ? "unidades" : "unidad"}</p>
                     </div>
-                    <ItemCount stock={detail.stock} initial= {1} onAdd={onAdd}/>
+                    <ItemCount stock={detail.stock} initial= {count} onAdd={onAdd}/>
                 </div>
             </div>
             
