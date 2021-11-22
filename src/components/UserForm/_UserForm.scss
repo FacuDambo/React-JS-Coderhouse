@@ -1,0 +1,32 @@
+.user-form {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+    justify-content: space-around;
+    width: 70%;
+
+    label {
+        align-self: baseline;
+    }
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.terminar-compra {
+    align-self: stretch;
+    border: unset;
+    background-color: $clr-8;
+    color: white;
+    transition: 0.3s;
+    border-radius: 10px;
+    height: 3rem;
+    line-height: 10px;
+
+    &:hover {
+        background-color: $clr-4;
+        color: black;
+        }
+}

@@ -25,7 +25,7 @@ function NavBar() {
                                 </div>
                             </NavLink>
                         </div>
-                        <NavLink to="/carrito" activeClassName="active-navbar-link-carrito"><CartWidget /></NavLink>
+                        <NavLink to="/carrito" activeClassName="active-navbar-link-carrito" className="navbar-carrito"><CartWidget /></NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

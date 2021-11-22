@@ -1,10 +1,54 @@
-import React from 'react'
+import { useState } from 'react'
 import { useCartContext } from '../../context/CartContext'
 import {RiDeleteBin5Line, RiDeleteBin2Line} from 'react-icons/ri'
 import { Link } from 'react-router-dom'
+import {getFirestore} from '../../services/getFirestore'
+import firebase from 'firebase';
+import 'firebase/firestore';
+import UserForm from '../UserForm/UserForm'
 
 const Cart = () => {
-    const {cartList, removerItem, removerCarrito, cartTotal} = useCartContext()
+    const [orderId, setOrderId] = useState("");
+    const {cartList, removerItem, removerCarrito, cartTotal, userData} = useCartContext()
+
+    const createOrder = (e) => {
+        e.preventDefault()
+
+        let order ={}
+        order.date = firebase.firestore.Timestamp.fromDate(new Date());
+        order.buyer = userData;
+        order.total = cartTotal;
+        order.items = cartList.map(itemAgregado => {
+            const id = itemAgregado.detail.id;
+            const nombre = itemAgregado.detail.nombre;
+            const cantidad = itemAgregado.cantidad;
+            const subtotal = itemAgregado.detail.precio * itemAgregado.cantidad;
+            return {id, nombre, cantidad, subtotal}
+        })
+
+        const dataBase = getFirestore()
+        dataBase.collection("orders").add(order)
+        .then(res => setOrderId(res.id))
+        .catch(err => alert('Error:', err))
+        .finally(() => removerCarrito())
+
+        const updatStock = dataBase.collection("productos").where
+        (firebase.firestore.FieldPath.documentId(), "in", cartList.map(item => item.detail.id))
+
+        const batch = dataBase.batch()
+
+        updatStock.get()
+        .then(res => {
+            res.docs.forEach(docSnap => {
+                batch.update(docSnap.ref, {
+                    stock: docSnap.data().stock - cartList.find(item => item.detail.id === docSnap.id).cantidad
+                })
+            })
+
+            batch.commit()
+            .catch (err => alert("Error:", err))
+        })
+    }
 
     return (
         <div className="carrito-body">
@@ -36,17 +80,23 @@ const Cart = () => {
                 </div>
 
                 <div className="carrito-pago">
+                    <UserForm createOrder={createOrder}/>
                     <span className="carrito-total">Total: ${`${cartTotal}`}</span>
-                    <span>Aca va la info del pago</span> 
                 </div>
             </div>
 
-            {cartList.length ? <button className='carrito-remover' onClick={() => removerCarrito()}><RiDeleteBin2Line /><span>Vaciar carrito</span></button>
-            :
-            <div className='container-carrito-vacio'>
-                <p>¡El carrito está vacío!</p>
-                <Link className='carrito-productos' to='/productos'>Iniciar compra</Link>
-            </div>
+            {cartList.length 
+            ? <button className='carrito-remover' onClick={() => removerCarrito()}><RiDeleteBin2Line /><span>Vaciar carrito</span></button>
+            : orderId === ""
+                ?   <div className='container-carrito-vacio'>
+                        <p>¡El carrito está vacío!</p>
+                        <Link className='carrito-productos' to='/productos'>Iniciar compra</Link>
+                    </div>
+                :   <div className='container-carrito-vacio'>
+                        <p>¡Gracias por tu compra!</p>
+                        <span>Codigo de operación: {orderId}</span>
+                        <Link to="/">Volver al inicio</Link>
+                    </div>
             }
         </div>
         

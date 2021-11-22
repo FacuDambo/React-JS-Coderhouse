@@ -6,8 +6,8 @@ import { useCartContext } from '../../context/CartContext'
 export default function CartWidget() {
     const {itemCantidad} = useCartContext ()
     return (
-        <div>
-            <RiShoppingCart2Line className="cart-widget" />
+        <div className="cart-widget">
+            <RiShoppingCart2Line  />
             <span className={
                 itemCantidad > 0
                 ? "carrito-badge"

@@ -13,11 +13,13 @@
 }
 
 .active-navbar-link-carrito {
-    text-decoration: none;
     color: #000000;
     background-color: $clr-2;
-    font-size: 1.2rem;
     border-radius: 10px;
+}
+
+.navbar-carrito {
+    text-decoration: none;
 }
 
 .navbar-link {

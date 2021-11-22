@@ -13,8 +13,7 @@ function ItemListContainer() {
     useEffect(() => {
         const dataBase = getFirestore()
         if (id) {
-            const dataBaseQuery = dataBase.collection('productos').where('categoria', '==', id).get() //la coleccion a la que quiero hacer refrencia
-            
+            const dataBaseQuery = dataBase.collection('productos').where('categoria', '==', id).get()
             dataBaseQuery
             .then( resp => setProductos( resp.docs.map( item => ({ id:item.id, ...item.data() }) )))
             .catch( error => alert(`Error: ${error}`))
@@ -26,6 +25,7 @@ function ItemListContainer() {
             .catch( error => console.log(error))
             .finally(() => setCargando(false))
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
 
     return (
