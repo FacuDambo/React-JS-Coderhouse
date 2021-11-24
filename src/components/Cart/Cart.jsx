@@ -89,13 +89,19 @@ const Cart = () => {
             ? <button className='carrito-remover' onClick={() => removerCarrito()}><RiDeleteBin2Line /><span>Vaciar carrito</span></button>
             : orderId === ""
                 ?   <div className='container-carrito-vacio'>
-                        <p>¡El carrito está vacío!</p>
-                        <Link className='carrito-productos' to='/productos'>Iniciar compra</Link>
+                        <div className="carrito-vacio-bg">
+                            <p>¡El carrito está vacío!</p>
+                            <Link className='carrito-productos' to='/productos'>Iniciar compra</Link>
+                        </div>
+                        <img src="https://img.graphicsurf.com/2019/12/online-shopping-vector-illustration1.jpg" alt="online shopping illustration" />
                     </div>
                 :   <div className='container-carrito-vacio'>
-                        <p>¡Gracias por tu compra!</p>
-                        <span>Codigo de operación: {orderId}</span>
-                        <Link to="/">Volver al inicio</Link>
+                        <div className="carrito-orden">
+                            <p>¡Gracias por tu compra!</p>
+                            <span>Codigo de operación: {orderId}</span>
+                            <Link to="/" className='carrito-productos'>Volver al inicio</Link>
+                        </div>
+                        <img src="https://unblast.com/wp-content/uploads/2020/04/Online-Shopping-Illustration.jpg" alt="online shopping illustration" />
                     </div>
             }
         </div>

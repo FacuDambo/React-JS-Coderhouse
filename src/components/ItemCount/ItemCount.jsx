@@ -31,7 +31,7 @@ export function ItemCount({stock, initial, onAdd}) {
             <div className="item-count">
                 <button onClick={handleClickMinus} disabled={count === 1}>-</button>
                 <span>{count}</span>
-                <button onClick={handleClickPlus} disabled={count === stock}>+</button>
+                <button onClick={handleClickPlus} disabled={count === stock || stock === 0}>+</button>
             </div>
             { cambiarBoton ? 
                 <div className="item-count-btn">
@@ -43,7 +43,7 @@ export function ItemCount({stock, initial, onAdd}) {
                     </Link>
                 </div>
                 : 
-                <button className="addCart" onClick={ handleOnAdd }><RiShoppingBagLine/>Agregar al carrito</button>
+                <button className="addCart" onClick={ handleOnAdd } disabled={stock === 0}><RiShoppingBagLine/>Agregar al carrito</button>
             }
         </div>
     )

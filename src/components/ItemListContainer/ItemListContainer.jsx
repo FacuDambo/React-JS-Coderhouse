@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import { getFirestore } from '../../services/getFirestore'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
-import Spinner from 'react-bootstrap/Spinner'
+import Loader from '../Loader/Loader'
 
 function ItemListContainer() {
     const [productos, setProductos] = useState([])
@@ -32,7 +32,7 @@ function ItemListContainer() {
         <div className="item-list-container">
             {
                 cargando 
-                ? <Spinner animation="border" role="status"><span className="visually-hidden">Loading...</span></Spinner> 
+                ? <Loader/>
                 : <ItemList product={productos}/>
             }
         </div>

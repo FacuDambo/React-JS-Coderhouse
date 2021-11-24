@@ -17,18 +17,14 @@ const Home = () => {
                     <Link to="categoria/Agendas" className="grid-agendas-link">AGENDAS</Link>
                     <div className="grid-shading"></div>
                 </div>
-                
-
                 <div className="grid-cuadernos">
                     <Link to="categoria/Cuadernos" className="grid-cuadernos-link">CUADERNOS</Link>
                     <div className="grid-shading"></div>
                 </div>
-
                 <div className="grid-recetarios">
                     <Link to="categoria/Recetarios" className="grid-recetarios-link">RECETARIOS</Link>
                     <div className="grid-shading"></div>
                 </div>
-
                 <div className="grid-viajes">
                     <Link to="categoria/Viajes" className="grid-viajes-link">VIAJES</Link>
                     <div className="grid-shading"></div>
