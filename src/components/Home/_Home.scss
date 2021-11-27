@@ -1,6 +1,6 @@
 .home-start {
     height: $nav-height;
-    background-image: url(https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+    background-image: url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
     @include bg;
 
     .home-start-div {
@@ -22,6 +22,7 @@
             margin-bottom: unset;
             text-align: start;
             font-family: 'Satisfy', cursive;
+            text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
         }
 
         p {
@@ -30,6 +31,7 @@
             margin-left: 10px;
             letter-spacing: 4px;
             text-align: start;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
 
         .home-start-div-button {
@@ -91,19 +93,19 @@
 
     .grid-agendas {
         grid-area: agendas;
-        background-image: url(https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+        background-image: url(https://images.unsplash.com/photo-1528938102132-4a9276b8e320?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
         @include bg;
         position: relative;
 
         .grid-agendas-link {
             position: relative;
-            top: 40%;
+            top: 45%;
             text-decoration: none;
             color: white;
             z-index: 1;
 
             font-size: 3rem;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
             &:hover+.grid-shading {
                 background-color: rgba(0, 0, 0, 0.8) !important;
@@ -113,7 +115,7 @@
 
     .grid-cuadernos {
         grid-area: cuadernos;
-        background-image: url(https://images.unsplash.com/photo-1519658422992-0c8495f08389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1155&q=80);
+        background-image: url(https://images.unsplash.com/photo-1501868984184-76121ed6a6e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
         @include bg;
         position: relative;
 
@@ -125,7 +127,7 @@
             z-index: 1;
 
             font-size: 3rem;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
             &:hover+.grid-shading {
                 background-color: rgba(0, 0, 0, 0.8) !important;
@@ -136,7 +138,7 @@
 
     .grid-recetarios {
         grid-area: recetarios;
-        background-image: url(https://images.unsplash.com/photo-1586062129117-08db958ba215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+        background-image: url(https://images.unsplash.com/photo-1585735119301-232c1633d439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
         @include bg;
         position: relative;
 
@@ -148,7 +150,7 @@
             z-index: 1;
 
             font-size: 3rem;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
             &:hover+.grid-shading {
                 background-color: rgba(0, 0, 0, 0.8) !important;
@@ -160,7 +162,7 @@
 
     .grid-viajes {
         grid-area: viajes;
-        background-image: url(https://images.unsplash.com/photo-1606636661598-60b82d8909ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+        background-image: url(https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
         @include bg;
         position: relative;
 
@@ -172,7 +174,7 @@
             z-index: 1;
 
             font-size: 3rem;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 
             &:hover+.grid-shading {
                 background-color: rgba(0, 0, 0, 0.8) !important;

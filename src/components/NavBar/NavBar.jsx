@@ -22,6 +22,7 @@ function NavBar() {
                                     <NavLink to="/categoria/Agendas" className="navbar-link">AGENDAS</NavLink>
                                     <NavLink to="/categoria/Cuadernos" className="navbar-link">CUADERNOS</NavLink>
                                     <NavLink to="/categoria/Recetarios" className="navbar-link">RECETARIOS</NavLink>
+                                    <NavLink to="/categoria/Viajes" className="navbar-link">VIAJES</NavLink>
                                 </div>
                             </NavLink>
                         </div>
