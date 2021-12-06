@@ -31,3 +31,20 @@
         color: black;
         }
 }
+
+.terminar-compra-dis {
+    align-self: stretch;
+    border: unset;
+    background-color: $clr-8;
+    color: white;
+    transition: 0.3s;
+    border-radius: 10px;
+    height: 3rem;
+    line-height: 10px;
+    cursor: not-allowed;
+
+    &:hover {
+        background-color: $clr-4;
+        color: black;
+        }
+}
