@@ -19,11 +19,14 @@ Para arrancar correctamente el proyecto primer debes instalar las siguientes dep
 
 - Sass:
   > <code>npm install node-sass --save</code>
+
+- React-Bootstrap:
+  > <code>npm install react-bootstrap bootstrap@5.1.3</code>
+  
 - React router dom:
   > <code>npm install --save react-router-dom </code>
 
 Una vez instaladas, lo siguiente es levantar el proyecto:
-
 - > <code>npm start</code>
 
 Luego de unos minutos el servidor local está listo y se abrirá en el navegador la aplicación.
